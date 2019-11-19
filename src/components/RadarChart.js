@@ -15,15 +15,15 @@ class RadarChart extends Component {
           background: '#282c34',
           toolbar: {
             show: false
-          },
-          markers: {
-            size: 5,
-            hover: {
-              size: 10
-            }
           }
         },
-        theme: {
+        markers: {
+          size: 5,
+          hover: {
+            size: 10
+          }
+        },
+         theme: {
           mode: 'dark',
           palette: 'palette6'
         },
@@ -41,20 +41,22 @@ class RadarChart extends Component {
         yaxis: {
           tickAmount: 5,
           min: 0,
-          max: 5
+          max: 5,
+          // style: { fontSize: '16px' }
         },
         dataLabels: {
           enabled: true,
-          enabledOnSeries: undefined,
+          enabledOnSeries: true,
           formatter: function (val, opts) {
-              return val
+            return val
           },
           textAnchor: 'middle',
           offsetX: 0,
           offsetY: 0,
-          style: {
-              fontSize: '16px',
-          }
+          style: { fontSize: '14px' }
+        },
+        tooltip: {
+          style: { fontSize: '16px' }
         }
       }
     }

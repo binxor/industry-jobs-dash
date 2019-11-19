@@ -1,4 +1,4 @@
-const averageSoftwareEngineerSalaryByStateBLS = [ // 2018 Bureau of Labor Statistics - https://data.bls.gov/oes/#/occGeo/One%20occupation%20for%20multiple%20geographical%20areas
+const distributionSoftwareEngineerSalaryByStateBLS = [ // 2018 Bureau of Labor Statistics - https://data.bls.gov/oes/#/occGeo/One%20occupation%20for%20multiple%20geographical%20areas
   {
     "Area Name": "Abilene, TX(0010180)",
     "Employment(1)": 40,

@@ -9,6 +9,8 @@ import MixedChart from './MixedChart'
 import RadialChart from './RadialChart';
 import CandyCaneChart from './CandyCaneChart';
 import RadarChart from './RadarChart';
+import StackedBarChart from './StackedBarChart';
+import stackedBarChartData from '../data/stackedBarChartData';
 
 class App extends Component {
 
@@ -21,7 +23,8 @@ class App extends Component {
       mixedChart: mixedChartData,
       radialChart: radialChartData,
       candyCaneChart: candyCaneChartData,
-      radarChart: radarChartData
+      radarChart: radarChartData,
+      stackedBarChart: stackedBarChartData
     }
   }
 
@@ -80,6 +83,12 @@ class App extends Component {
 
               <div className="col radial-chart">
                 <RadialChart chartContent={this.state.radialChart} updateCharts={this.updateCharts} type="radialBar" width="280" />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col bar-chart">
+                <StackedBarChart chartContent={this.state.stackedBarChart} updateCharts={this.updateCharts} />
               </div>
             </div>
 
