@@ -12,7 +12,7 @@ const candyCaneChartData = {
     name: 'red',
     data: [ 65 ]
   } ],
-  categories: [ 'Fav Color' ]
+  categories: [ 'Job Satisfaction' ]
 }
 
 export default candyCaneChartData

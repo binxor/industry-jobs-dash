@@ -49,14 +49,14 @@ class RadialChart extends Component {
                 offsetY: -20,
                 show: true,
                 color: '#fff',
-                fontSize: '13px'
+                fontSize: '20px'
               },
               value: {
                 formatter: function (val) {
-                  return val;
+                  return val + '%';
                 },
                 color: '#11fff1',
-                fontSize: '30px',
+                fontSize: '40px',
                 show: true,
               }
             }
@@ -78,7 +78,7 @@ class RadialChart extends Component {
         stroke: {
           lineCap: 'round'
         },
-        labels: [ 'Percent' ],
+        labels: [ this.props.chartContent.title || 'Percent' ],
       }
     };
   }

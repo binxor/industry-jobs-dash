@@ -11,7 +11,7 @@ class MixedChart extends Component {
     this.state = {
       optionsMixedChart: {
         theme: {
-          mode: 'dark', 
+          mode: 'dark',
           palette: 'palette3'
         },
         chart: {
@@ -21,6 +21,20 @@ class MixedChart extends Component {
           },
           background: '#000'
         },
+        title: {
+          text: this.props.chartContent.title || '',
+          align: 'center',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 10,
+          floating: false,
+          style: {
+            fontSize: '22px'
+          }
+        },
+        legend: {
+          fontSize: '18px'
+        },
         plotOptions: {
           bar: {
             columnWidth: '50%',
@@ -28,10 +42,13 @@ class MixedChart extends Component {
           }
         },
         stroke: {
-          width: [ 4, 4, 4 ],
+          width: [ 4, 4, 4, 4, 4 ],
         },
         xaxis: {
-          categories: this.props.chartContent.categories
+          categories: this.props.chartContent.categories,
+          labels: {
+            style: { fontSize: '16px' }
+          }
         },
         markers: {
           size: 6,
@@ -45,7 +62,10 @@ class MixedChart extends Component {
         yaxis: {
           tickAmount: 5,
           min: 0,
-          max: 100
+          max: 100,
+          labels: {
+            style: { fontSize: '16px' }
+          }
         }
       }
     }
@@ -54,7 +74,7 @@ class MixedChart extends Component {
   render () {
     return (
       <div className="col mixed-chart">
-        <Chart options={this.state.optionsMixedChart} series={this.props.chartContent.series} type="line" width="500" />
+        <Chart options={this.state.optionsMixedChart} series={this.props.chartContent.series} type="line" width="600" />
       </div>
     )
   }
