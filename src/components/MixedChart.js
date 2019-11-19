@@ -8,11 +8,17 @@ class MixedChart extends Component {
 
     this.updateCharts = this.props.updateCharts.bind(this)
 
+    this.findMax = (data) => {
+      let allValues = data.flatMap(d => d['data'])
+      let max = Math.max(...allValues)
+      let chartMax = Math.ceil(max/50000) * 50000
+      return chartMax;
+    }
     this.state = {
       optionsMixedChart: {
         theme: {
           mode: 'dark',
-          palette: 'palette3'
+          palette: 'palette6'
         },
         chart: {
           id: 'basic-bar',
@@ -20,6 +26,18 @@ class MixedChart extends Component {
             show: false
           },
           background: '#000'
+        },
+        fill: {
+          type: 'solid',
+          opacity: [0.35, 0.8],
+        },
+        tooltip: {
+          style: { fontSize: '16px' },
+          y: {
+            formatter: function (val) {
+              return '$ ' + val.toLocaleString()
+            }
+          }
         },
         title: {
           text: this.props.chartContent.title || '',
@@ -37,8 +55,7 @@ class MixedChart extends Component {
         },
         plotOptions: {
           bar: {
-            columnWidth: '50%',
-            endingShape: 'arrow'
+            columnWidth: '50%'
           }
         },
         stroke: {
@@ -51,7 +68,7 @@ class MixedChart extends Component {
           }
         },
         markers: {
-          size: 6,
+          size: 1,
           strokeWidth: 3,
           fillOpacity: 0,
           strokeOpacity: 0,
@@ -62,7 +79,7 @@ class MixedChart extends Component {
         yaxis: {
           tickAmount: 5,
           min: 0,
-          max: 100,
+          max: this.findMax(this.props.chartContent.series),
           labels: {
             style: { fontSize: '16px' }
           }
