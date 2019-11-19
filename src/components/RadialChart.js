@@ -49,14 +49,14 @@ class RadialChart extends Component {
                 offsetY: -20,
                 show: true,
                 color: '#fff',
-                fontSize: '20px'
+                fontSize: '30px'
               },
               value: {
                 formatter: function (val) {
                   return val + '%';
                 },
                 color: '#11fff1',
-                fontSize: '40px',
+                fontSize: '50px',
                 show: true,
               }
             }
@@ -86,7 +86,7 @@ class RadialChart extends Component {
   render () {
     return (
       <div className="col mixed-chart">
-        <Chart options={this.state.optionsRadial} series={this.props.chartContent.series} type="radialBar" width="280" />
+        <Chart options={this.state.optionsRadial} series={this.props.chartContent.series} type="radialBar" width="350" />
       </div>
     )
   }

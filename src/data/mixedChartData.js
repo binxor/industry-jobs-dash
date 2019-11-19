@@ -1,19 +1,28 @@
-const mixedChartData = {
+const mixedChartData = { // Median hourly U.S. wages by job title, 2008 - 2018 - https://www.statista.com/statistics/199928/hourly-wages-of-the-largest-occupations-regarding-software-publishers-in-the-us/
+  title: 'Salary Year Over Year',
   series:
     [ {
-      name: 'series-1',
+      name: 'Software Managers',
       type: 'line',
-      data: [ 30, 40, 25, 50, 49, 21, 70, 51 ]
+      data: [ 60.98, 63.08, 64.47, 65.74, 67.85, 70.49, 71.72, 72.55, 73.57 ]
     }, {
-      name: 'series-2',
+      name: 'Software developers, system software',
       type: 'column',
-      data: [ 23, 12, 54, 61, 32, 56, 81, 19 ]
+      data: [ 45, 46.08, 47.16, 47.96, 50.18, 49.76, 50.99, 50.02, 52.22 ]
     }, {
-      name: 'series-3',
+      name: 'Software developers, applications',
       type: 'column',
-      data: [ 62, 12, 45, 55, 76, 41, 23, 43 ]
+      data: [ 42.17, 44.9, 46.1, 46.6, 50.68, 51.63, 52.73, 53.48, 53.96 ]
+    }, {
+      name: 'Computer programmers',
+      type: 'column',
+      data: [ 39.32, 38.38, 38.61, 39.88, 46.38, 47.87, 48.17, 44.9, 46.81 ]
+    }, {
+      name: 'Computer systems analysts',
+      type: 'column',
+      data: [ 38.18, 38.1, 39.3, 40.34, 39.68, 40.14, 40.98, 42.3, 43.66 ]
     } ],
-  categories: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
+  categories: [ '2008', '2010', '2011', '2012', '2013', '2014', '2015', '2017', '2018' ]
 }
 
 export default mixedChartData
