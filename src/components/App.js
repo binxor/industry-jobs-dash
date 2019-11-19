@@ -11,6 +11,8 @@ import CandyCaneChart from './CandyCaneChart';
 import RadarChart from './RadarChart';
 import StackedBarChart from './StackedBarChart';
 import stackedBarChartData from '../data/stackedBarChartData';
+import heatmapChartData from '../data/heatmapChartData';
+import HeatmapChart from './HeatmapChart';
 
 class App extends Component {
 
@@ -24,7 +26,8 @@ class App extends Component {
       radialChart: radialChartData,
       candyCaneChart: candyCaneChartData,
       radarChart: radarChartData,
-      stackedBarChart: stackedBarChartData
+      stackedBarChart: stackedBarChartData,
+      heatmapChart: heatmapChartData
     }
   }
 
@@ -89,6 +92,10 @@ class App extends Component {
             <div className="row">
               <div className="col bar-chart">
                 <StackedBarChart chartContent={this.state.stackedBarChart} updateCharts={this.updateCharts} />
+              </div>
+
+              <div className="col">
+                <HeatmapChart chartContent={this.state.heatmapChart} updateCharts={this.updateCharts} />
               </div>
             </div>
 

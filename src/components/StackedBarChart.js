@@ -11,7 +11,7 @@ class StackedBarChart extends Component {
       optionsStackedBarChart: {
         theme: {
           mode: 'dark',
-          palette: 'palette3'
+          palette: 'palette6'
         },
         chart: {
           stacked: true,
