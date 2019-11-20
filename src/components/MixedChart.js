@@ -91,7 +91,7 @@ class MixedChart extends Component {
   render () {
     return (
       <div className="col mixed-chart">
-        <Chart options={this.state.optionsMixedChart} series={this.props.chartContent.series} type="line" width="600" />
+        <Chart options={this.state.optionsMixedChart} series={this.props.chartContent.series} type="line" width="500" />
       </div>
     )
   }

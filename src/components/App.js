@@ -9,12 +9,14 @@ import MixedChart from './MixedChart'
 import RadialChart from './RadialChart';
 import CandyCaneChart from './CandyCaneChart';
 import RadarChart from './RadarChart';
+import RingChart from './RingChart';
 import StackedBarChart from './StackedBarChart';
 import stackedBarChartData from '../data/stackedBarChartData';
 import heatmapChartData from '../data/heatmapChartData';
 import HeatmapChart from './HeatmapChart';
 import BarChart from './BarChart';
 import barChartData from '../data/barChartData';
+import ringChartData from '../data/ringChartData';
 
 class App extends Component {
 
@@ -30,7 +32,8 @@ class App extends Component {
       radarChart: radarChartData,
       stackedBarChart: stackedBarChartData,
       heatmapChart: heatmapChartData,
-      barChart: barChartData
+      barChart: barChartData,
+      ringChart: ringChartData
     }
   }
 
@@ -103,6 +106,10 @@ class App extends Component {
 
               <div className="col">
                 <HeatmapChart chartContent={this.state.heatmapChart} updateCharts={this.updateCharts} />
+              </div>
+
+              <div className="col">
+                <RingChart chartContent={this.state.ringChart} updateCharts={this.updateCharts} />
               </div>
             </div>
 

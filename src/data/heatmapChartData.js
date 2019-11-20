@@ -13,20 +13,20 @@ const heatmapChartData = {
     //     { x: '65+', y: 9705 }
     //   ]
     // },
+    // {
+    //   name: 'Computer and InfoSys Managers',
+    //   data: [
+    //     { x: '16 - 19', y: 1 },
+    //     { x: '20 - 24', y: 15 },
+    //     { x: '25 - 34', y: 19 },
+    //     { x: '35 - 44', y: 35 },
+    //     { x: '45 - 54', y: 48 },
+    //     { x: '55 - 64', y: 45 },
+    //     { x: '65+', y: 9 }
+    //   ]
+    // },
     {
-      name: 'Computer and InfoSys Managers',
-      data: [
-        { x: '16 - 19', y: 1 },
-        { x: '20 - 24', y: 15 },
-        { x: '25 - 34', y: 19 },
-        { x: '35 - 44', y: 35 },
-        { x: '45 - 54', y: 48 },
-        { x: '55 - 64', y: 45 },
-        { x: '65+', y: 9 }
-      ]
-    },
-    {
-      name: 'Computer Systems Analysts',
+      name: 'Systems Analysts',
       data: [
         { x: '16 - 19', y: 2 },
         { x: '20 - 24', y: 38 },
@@ -38,7 +38,7 @@ const heatmapChartData = {
       ]
     },
     {
-      name: 'Computer Programmers',
+      name: 'Programmers',
       data: [
         { x: '16 - 19', y: 3 },
         { x: '20 - 24', y: 28 },
@@ -50,7 +50,7 @@ const heatmapChartData = {
       ]
     },
     {
-      name: 'Software Developers, Applications, and Systems Software',
+      name: 'Software Developers',
       data: [
         { x: '16 - 19', y: 1 },
         { x: '20 - 24', y: 99 },

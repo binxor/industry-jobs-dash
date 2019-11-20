@@ -75,7 +75,7 @@ class BarChart extends Component {
   render () {
     return (
       <div id="chart">
-        <Chart options={this.state.options} series={this.props.chartContent.series} type="bar" height="350" width="600" />
+        <Chart options={this.state.options} series={this.props.chartContent.series} type="bar" height="350" width="400" />
       </div>
     );
   }
