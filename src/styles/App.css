@@ -21,12 +21,8 @@
   color: #09d3ac;
 }
 
-.col {
-  border: 1px solid yellowgreen;
-}
-
 .link {
-  font-size: calc(1.6vmin);
+  font-size: calc(1.8vmin);
 }
 
 .row {
@@ -34,6 +30,10 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+.ugly {
+  border: 1px solid yellowgreen;
 }
 
 body {
