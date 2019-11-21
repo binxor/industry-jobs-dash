@@ -72,9 +72,13 @@ class CandyCaneChart extends Component {
 
   render () {
     return (
-      <div className="col mixed-chart">
-        <Chart options={this.state.optionsCandyCane} series={this.props.chartContent.series} height={140} type="bar" width={600} />
-      </div>
+      <Chart
+        type="bar"
+        options={this.state.optionsCandyCane}
+        series={this.props.chartContent.series}
+        height={this.props.height || 140}
+        width={this.props.width || 600}
+      />
     )
   }
 }

@@ -10,7 +10,11 @@ const mixedChartData = { // Median hourly U.S. wages by job title, 2008 - 2018 -
       type: 'bar',
       data: [ 65750, 84000, 105220, 127870, 152730 ]
     } ],
-  categories: [ '10th', '25th', '50th (Avg)', '75th', '90th' ]
+  categories: [ '10th', '25th', '50th (Avg)', '75th', '90th' ],
+  sources: [
+    { name: '2019 Bureau of Labor Statistics', link: 'https://www.bls.gov/oes/current/oes151132.htm#nat' },
+    { name: '2018 Bureau of Labor Statistics', link: 'https://data.bls.gov/oes/#/occGeo/One%20occupation%20for%20multiple%20geographical%20areas' },
+  ]
 }
 
 export default mixedChartData

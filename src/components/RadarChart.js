@@ -10,6 +10,10 @@ class RadarChart extends Component {
 
     this.state = {
       optionsRadar: {
+        theme: {
+          mode: 'dark',
+          palette: 'palette6'
+        },
         chart: {
           foreColor: '#fff',
           background: '#282c34',
@@ -23,15 +27,11 @@ class RadarChart extends Component {
             size: 10
           }
         },
-         theme: {
-          mode: 'dark',
-          palette: 'palette6'
-        },
         labels: this.props.chartContent.categories || [],
         title: {
           align: 'center',
           margin: 0,
-          offsetY: 30,
+          offsetY: 10,
           floating: true,
           style: {
             fontSize: '22px'
@@ -41,19 +41,10 @@ class RadarChart extends Component {
         yaxis: {
           tickAmount: 5,
           min: 0,
-          max: 5,
-          // style: { fontSize: '16px' }
+          max: 5
         },
         dataLabels: {
-          enabled: true,
-          enabledOnSeries: true,
-          formatter: function (val, opts) {
-            return val
-          },
-          textAnchor: 'middle',
-          offsetX: 0,
-          offsetY: 0,
-          style: { fontSize: '14px' }
+          style: { fontSize: '12px' }
         },
         tooltip: {
           style: { fontSize: '16px' }
@@ -64,9 +55,13 @@ class RadarChart extends Component {
 
   render () {
     return (
-      <div className="col mixed-chart">
-        <Chart options={this.state.optionsRadar} series={this.props.chartContent.series} height={500} type="radar" width={500} />
-      </div>
+      <Chart
+        type="radar"
+        options={this.state.optionsRadar}
+        series={this.props.chartContent.series}
+        height={this.props.height||350}
+        width={this.props.width||500}
+      />
     )
   }
 

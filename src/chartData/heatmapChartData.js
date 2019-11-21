@@ -74,7 +74,10 @@ const heatmapChartData = {
       ]
     }
   ],
-  categories: [ '16 - 19', '20 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65+' ]
+  categories: [ '16 - 19', '20 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65+' ],
+  sources: [
+    { name: '2019 Bureau of Labor Statistics', link: 'https://www.bls.gov/cps/cpsaat11b.htm' }
+  ]
 }
 
 export default heatmapChartData

@@ -85,9 +85,12 @@ class RadialChart extends Component {
 
   render () {
     return (
-      <div className="col mixed-chart">
-        <Chart options={this.state.optionsRadial} series={this.props.chartContent.series} type="radialBar" width="350" />
-      </div>
+      <Chart
+        type="radialBar"
+        options={this.state.optionsRadial}
+        series={this.props.chartContent.series}
+        height={this.props.height||"350"}
+      />
     )
   }
 

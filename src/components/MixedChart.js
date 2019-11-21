@@ -9,9 +9,9 @@ class MixedChart extends Component {
     this.updateCharts = this.props.updateCharts.bind(this)
 
     this.findMax = (data) => {
-      let allValues = data.flatMap(d => d['data'])
+      let allValues = data.flatMap(d => d[ 'data' ])
       let max = Math.max(...allValues)
-      let chartMax = Math.ceil(max/50000) * 50000
+      let chartMax = Math.ceil(max / 50000) * 50000
       return chartMax;
     }
     this.state = {
@@ -29,7 +29,7 @@ class MixedChart extends Component {
         },
         fill: {
           type: 'solid',
-          opacity: [0.35, 0.8],
+          opacity: [ 0.35, 0.8 ],
         },
         tooltip: {
           style: { fontSize: '16px' },
@@ -90,9 +90,13 @@ class MixedChart extends Component {
 
   render () {
     return (
-      <div className="col mixed-chart">
-        <Chart options={this.state.optionsMixedChart} series={this.props.chartContent.series} type="line" width="500" />
-      </div>
+      <Chart
+        type="line"
+        options={this.state.optionsMixedChart}
+        series={this.props.chartContent.series}
+        height={this.props.height||"350"}
+        width={this.props.height||"500"}
+      />
     )
   }
 }

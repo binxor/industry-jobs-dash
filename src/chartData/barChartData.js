@@ -10,6 +10,9 @@ const barChartData = {
     '4 - 7',
     '7 - 10',
     '10+'
+  ],
+  sources: [
+    { name: '2009 Salary.com', link: 'https://www.salary.com/research/salary/general/software-engineer-salary?view=detail' }
   ]
 }
 

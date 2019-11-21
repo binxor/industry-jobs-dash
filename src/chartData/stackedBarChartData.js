@@ -22,7 +22,10 @@ const stackedBarChartData = {
     name: 'Age 65+',
     data: [ 9, 29, 18, 34, 4, 9705 ]
   } ],
-  categories: [ 'Computer and InfoSys Managers', 'Computer Systems Analysts', 'Computer Programmers', 'Software Developers, Applications, and Systems Software', 'Web Developers', 'All Computer Occupations' ]
+  categories: [ 'Computer and InfoSys Managers', 'Computer Systems Analysts', 'Computer Programmers', 'Software Developers, Applications, and Systems Software', 'Web Developers', 'All Computer Occupations' ],
+  sources: [
+    { name: '2019 Bureau of Labor Statistics', link: 'https://www.bls.gov/cps/cpsaat11b.htm' }
+  ]
 }
 
 export default stackedBarChartData

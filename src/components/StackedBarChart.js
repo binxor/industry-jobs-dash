@@ -81,9 +81,12 @@ class StackedBarChart extends Component {
 
   render () {
     return (
-      <div className="col mixed-chart">
-        <Chart options={this.state.optionsStackedBarChart} series={this.props.chartContent.series} type="bar" width="600" />
-      </div>
+      <Chart
+        type="bar"
+        options={this.state.optionsStackedBarChart}
+        series={this.props.chartContent.series}
+        width={this.props.width||"600"}
+      />
     )
   }
 }

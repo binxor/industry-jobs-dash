@@ -26,7 +26,7 @@ class HeatmapChart extends Component {
           type: 'category',
           categories: this.props.chartContent.categories,
           labels: {
-            style: { fontSize: '16px' }
+            style: { fontSize: '14px' }
           }
         },
         yaxis: {
@@ -59,9 +59,13 @@ class HeatmapChart extends Component {
 
   render () {
     return (
-      <div className="col">
-        <Chart options={this.state.optionsHeatmapChart} series={this.props.chartContent.series} type="heatmap" width="600" />
-      </div>
+      <Chart
+        type="heatmap"
+        options={this.state.optionsHeatmapChart}
+        series={this.props.chartContent.series}
+        height={this.props.height||"350"}
+        width={this.props.width||"500"}
+      />
     )
   }
 }

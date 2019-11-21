@@ -64,7 +64,9 @@ class RingChart extends Component {
             useSeriesColors: true,
           },
           formatter: function (seriesName, opts) {
-            return seriesName + ":  " + '$' + Math.floor(20*opts.w.globals.series[opts.seriesIndex].toLocaleString())/10 + 'K'
+            console.log(props.chartContent.yMax, opts.w.globals.series[ opts.seriesIndex ])
+            // Convert from % of ring filled back to $ amount
+            return seriesName + ':  $' + (props.chartContent.yMax * opts.w.globals.series[ opts.seriesIndex ] / 100000).toFixed(1).toLocaleString() + 'K'
           },
           itemMargin: {
             horizontal: 0,
@@ -84,9 +86,13 @@ class RingChart extends Component {
 
   render () {
     return (
-      <div id="chart">
-        <Chart options={this.state.options} series={this.props.chartContent.series} type="radialBar" height="350" width="400" />
-      </div>
+      <Chart
+        type="radialBar"
+        options={this.state.options}
+        series={this.props.chartContent.series}
+        height={this.props.height||"350"}
+        width={this.props.width||"400"}
+      />
     );
   }
 }

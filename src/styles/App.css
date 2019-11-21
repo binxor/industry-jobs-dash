@@ -17,8 +17,16 @@
   color: white;
 }
 
-.App-link {
+.App-link, a {
   color: #09d3ac;
+}
+
+.col {
+  border: 1px solid yellowgreen;
+}
+
+.link {
+  font-size: calc(1.6vmin);
 }
 
 .row {

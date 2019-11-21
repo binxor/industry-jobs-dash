@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../styles/App.css';
-import mixedChartData from '../data/mixedChartData';
-import candyCaneChartData from '../data/candyCaneChartData';
-import radialChartData from '../data/radialChartData';
-import radarChartData from '../data/radarChartData';
+import mixedChartData from '../chartData/mixedChartData';
+import candyCaneChartData from '../chartData/candyCaneChartData';
+import radialChartData from '../chartData/radialChartData';
+import radarChartData from '../chartData/radarChartData';
 import MixedChart from './MixedChart'
 import RadialChart from './RadialChart';
 import CandyCaneChart from './CandyCaneChart';
 import RadarChart from './RadarChart';
 import RingChart from './RingChart';
 import StackedBarChart from './StackedBarChart';
-import stackedBarChartData from '../data/stackedBarChartData';
-import heatmapChartData from '../data/heatmapChartData';
+import stackedBarChartData from '../chartData/stackedBarChartData';
+import heatmapChartData from '../chartData/heatmapChartData';
 import HeatmapChart from './HeatmapChart';
 import BarChart from './BarChart';
-import barChartData from '../data/barChartData';
-import ringChartData from '../data/ringChartData';
+import barChartData from '../chartData/barChartData';
+import ringChartData from '../chartData/ringChartData';
+import SourceLink from './SourceLink';
 
 class App extends Component {
 
@@ -68,52 +69,56 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Industry Stats
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sources
-        </a>
+            Industry Stats  <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sources
+              </a>
+          </p>
           <div>
             <div className="row">
-              <div className="col mixed-chart">
+              <div className="col">
                 <MixedChart chartContent={this.state.mixedChart} updateCharts={this.updateCharts} type="line" width="500" />
+                <SourceLink sources={this.state.mixedChart.sources}></SourceLink>
               </div>
 
               <div className="col">
                 <RadarChart chartContent={this.state.radarChart} updateCharts={this.updateCharts} />
+                <SourceLink sources={this.state.radarChart.sources}></SourceLink>
               </div>
 
-              <div className="col radial-chart">
+              <div className="col">
                 <RadialChart chartContent={this.state.radialChart} updateCharts={this.updateCharts} type="radialBar" width="280" />
+                <SourceLink sources={this.state.radialChart.sources}></SourceLink>
               </div>
             </div>
 
             <div className="row">
-              {/* <div className="col bar-chart">
+              {/* <div className="col">
                 <StackedBarChart chartContent={this.state.stackedBarChart} updateCharts={this.updateCharts} />
               </div> */}
 
-              <div className="col bar-chart">
+              <div className="col">
                 <BarChart chartContent={this.state.barChart} updateCharts={this.updateCharts} />
+                <SourceLink sources={this.state.barChart.sources}></SourceLink>
               </div>
 
               <div className="col">
                 <HeatmapChart chartContent={this.state.heatmapChart} updateCharts={this.updateCharts} />
+                <SourceLink sources={this.state.heatmapChart.sources}></SourceLink>
               </div>
 
               <div className="col">
                 <RingChart chartContent={this.state.ringChart} updateCharts={this.updateCharts} />
+                <SourceLink sources={this.state.ringChart.sources}></SourceLink>
               </div>
             </div>
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col percentage-chart">
                 <CandyCaneChart chartContent={this.state.candyCaneChart} updateCharts={this.updateCharts} />
               </div>
@@ -121,7 +126,7 @@ class App extends Component {
               <p className="col">
                 <button onClick={this.updateCharts}>Update!</button>
               </p>
-            </div>
+            </div> */}
           </div>
         </header>
       </div >
