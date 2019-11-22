@@ -42,7 +42,7 @@ class RingChart extends Component {
           },
         },
         title: {
-          text: this.props.chartContent.title || '',
+          // text: this.props.chartContent.title || '',
           align: 'center',
           margin: 10,
           offsetX: 0,
@@ -58,8 +58,8 @@ class RingChart extends Component {
           floating: true,
           fontSize: '18px',
           position: 'left',
-          offsetX: -1,
-          offsetY: 10,
+          offsetX: -10,
+          offsetY: -15,
           labels: {
             useSeriesColors: true,
           },

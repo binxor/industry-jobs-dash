@@ -25,7 +25,7 @@ class MixedChart extends Component {
           toolbar: {
             show: false
           },
-          background: '#000'
+          background: '#282c34'
         },
         fill: {
           type: 'solid',
@@ -40,7 +40,7 @@ class MixedChart extends Component {
           }
         },
         title: {
-          text: this.props.chartContent.title || '',
+          // text: this.props.chartContent.title || '',
           align: 'center',
           margin: 10,
           offsetX: 0,

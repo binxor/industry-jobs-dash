@@ -70,51 +70,63 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Industry Stats  <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sources
-              </a>
+            Software Engineering Industry Stats
           </p>
-          <div>
+          <div className="dashboard">
             <div className="row">
-              <div className="col">
-                <MixedChart chartContent={this.state.mixedChart} updateCharts={this.updateCharts} type="line" width="500" />
+              <div className="card">
+                <MixedChart chartContent={this.state.mixedChart} updateCharts={this.updateCharts} type="line" width="450" />
                 <SourceLink sources={this.state.mixedChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.mixedChart.title}
+                </div>
               </div>
 
-              <div className="col">
-                <RadarChart chartContent={this.state.radarChart} updateCharts={this.updateCharts} />
+              <div className="card">
+                <RadarChart chartContent={this.state.radarChart} updateCharts={this.updateCharts} width={450} />
                 <SourceLink sources={this.state.radarChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.radarChart.title}
+                </div>
               </div>
 
-              <div className="col">
-                <RadialChart chartContent={this.state.radialChart} updateCharts={this.updateCharts} type="radialBar" width="280" />
+              <div className="card">
+                <RadialChart chartContent={this.state.radialChart} updateCharts={this.updateCharts} type="radialBar" height="385" />
                 <SourceLink sources={this.state.radialChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.radialChart.title}
+                </div>
               </div>
+
             </div>
 
             <div className="row">
-              {/* <div className="col">
+              {/* <div className="card">
                 <StackedBarChart chartContent={this.state.stackedBarChart} updateCharts={this.updateCharts} />
               </div> */}
 
-              <div className="col">
+              <div className="card">
                 <BarChart chartContent={this.state.barChart} updateCharts={this.updateCharts} />
                 <SourceLink sources={this.state.barChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.barChart.title}
+                </div>
               </div>
 
-              <div className="col">
-                <HeatmapChart chartContent={this.state.heatmapChart} updateCharts={this.updateCharts} />
+              <div className="card">
+                <HeatmapChart chartContent={this.state.heatmapChart} updateCharts={this.updateCharts} height="350" width="450"/>
                 <SourceLink sources={this.state.heatmapChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.heatmapChart.title}
+                </div>
               </div>
 
-              <div className="col">
-                <RingChart chartContent={this.state.ringChart} updateCharts={this.updateCharts} />
+              <div className="card">
+                <RingChart chartContent={this.state.ringChart} updateCharts={this.updateCharts} height="500"  />
                 <SourceLink sources={this.state.ringChart.sources}></SourceLink>
+                <div className="card-title">
+                  {this.state.ringChart.title}
+                </div>
               </div>
             </div>
 
@@ -123,13 +135,13 @@ class App extends Component {
                 <CandyCaneChart chartContent={this.state.candyCaneChart} updateCharts={this.updateCharts} />
               </div>
 
-              <p className="col">
+              <p className="card">
                 <button onClick={this.updateCharts}>Update!</button>
               </p>
             </div> */}
           </div>
         </header>
-      </div >
+      </div>
     )
   }
 }

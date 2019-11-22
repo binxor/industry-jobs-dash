@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #171b23;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,34 @@
 
 .App-link, a {
   color: #09d3ac;
+}
+
+.card {
+  border: 1px solid #243d57;
+  border-radius: 25px;
+  min-height: 350px;
+  min-width: 400px;
+  margin: 5px;
+  box-shadow: 0 3px 6px -4px #809dba;
+  background: #282c34;
+}
+
+.card-title {
+  background-color: #132c46;
+  border: 1px solid #243d57;
+  border-radius: 0px 0px 25px 25px;
+  height: 35px;
+  font-size: 22px;
+  line-height: 1.5em;
+  min-width: 400px;
+  text-align: center;
+}
+
+.dashboard {
+  padding: 10px;
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  background: #243d57;
 }
 
 .link {

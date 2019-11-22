@@ -36,7 +36,7 @@ class RadarChart extends Component {
           style: {
             fontSize: '22px'
           },
-          text: this.props.chartContent.title || ''
+          // text: this.props.chartContent.title || ''
         },
         yaxis: {
           tickAmount: 5,
@@ -44,7 +44,7 @@ class RadarChart extends Component {
           max: 5
         },
         dataLabels: {
-          style: { fontSize: '12px' }
+          style: { fontSize: '14px' }
         },
         tooltip: {
           style: { fontSize: '16px' }

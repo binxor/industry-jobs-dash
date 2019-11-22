@@ -58,7 +58,7 @@ class BarChart extends Component {
           }
         },
         title: {
-          text: this.props.chartContent.title || '',
+          // text: this.props.chartContent.title || '',
           align: 'center',
           margin: 10,
           offsetX: 0,
