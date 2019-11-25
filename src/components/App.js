@@ -70,7 +70,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Software Engineering Industry Stats
+            Software Engineering Industry Stats 2018-2019
           </p>
           <div className="dashboard">
             <div className="row">

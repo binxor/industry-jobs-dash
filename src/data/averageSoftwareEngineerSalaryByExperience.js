@@ -1,4 +1,4 @@
-const averageSoftwareEngineerSalaryByExperience = [ // 2009 Salary.com - https://www.salary.com/research/salary/general/software-engineer-salary?view=detail
+const averageSoftwareEngineerSalaryByExperience = [ // 2019 Salary.com - https://www.salary.com/research/salary/general/software-engineer-salary?view=detail
   {
     'title': 'Software Engineer I',
     'altTitles': [ 'Entry Software Engineer', 'Software Developer I', 'Software Applications Engineer I' ],

@@ -12,7 +12,7 @@ const barChartData = {
     '10+'
   ],
   sources: [
-    { name: '2009 Salary.com', link: 'https://www.salary.com/research/salary/general/software-engineer-salary?view=detail' }
+    { name: '2019 Salary.com', link: 'https://www.salary.com/research/salary/general/software-engineer-salary?view=detail' }
   ]
 }
 
