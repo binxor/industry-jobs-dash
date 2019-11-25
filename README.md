@@ -1,4 +1,4 @@
-# dev-jobs-dash
+# industry-jobs-dash
 A dark dashboard build with React and the apex-charts library as a proof of concept.  
 
 ## Topic
